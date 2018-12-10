@@ -1,0 +1,5 @@
+France^Germany^46^Russian Federation^45^Russia^33
+Germany^Germany^100^Russian Federation^51^United Kingdom^37
+United States^United States^100^United Kingdom^60^Russian Federation^39
+Russia^Russia^100^Russian Federation^90^United States^32
+Italy^Russia^36^United States^36^United Kingdom^36
