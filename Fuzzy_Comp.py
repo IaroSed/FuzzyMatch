@@ -24,8 +24,8 @@ df_A = pd.read_excel("data_A.xlsx",encoding='utf-8')
 df_B = pd.read_excel("data_B.xlsx",encoding='utf-8')
 
 # The column name needs to be changed
-df_A_list = df_A['Publisher'].tolist()
-df_B_list = df_B['Publisher'].tolist()
+df_A_list = df_A['Header'].tolist()
+df_B_list = df_B['Header'].tolist()
 
 
 for p in range(0,len(df_A_list)):
