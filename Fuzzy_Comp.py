@@ -13,11 +13,11 @@ import pandas as pd
 # a- append (adds new lines in the end of the file)
 # The name of the output file needs to be changed.
 print("Opening companies file")
-SF_L = open("Comp_duplicates_match.txt", 'w',encoding='utf-8')
+Data_out = open("Comp_duplicates_match.txt", 'w',encoding='utf-8')
 
 #
 #print("Truncating...")
-#SF_L.truncate()
+#Data_out.truncate()
 
 # File names need to be changed
 df_A = pd.read_excel("data_A.xlsx",encoding='utf-8')
@@ -32,12 +32,12 @@ for p in range(0,len(df_A_list)):
 	# look for the 3 best matches from B
 	result = process.extract(str(df_A_list[p]),choices=df_B_list, limit=3)
 	# write the result
-	SF_L.write(str(df_A_list[p])+"^"+str(result[0][0])+"^"+str(result[0][1])+"^"+str(result[1][0])+"^"+str(result[1][1])+"^"+str(result[2][0])+"^"+str(result[2][1]))
+	Data_out.write(str(df_A_list[p])+"^"+str(result[0][0])+"^"+str(result[0][1])+"^"+str(result[1][0])+"^"+str(result[1][1])+"^"+str(result[2][0])+"^"+str(result[2][1]))
 	# go to the next line
-	SF_L.write("\n")
+	Data_out.write("\n")
 #	print(str(df_dx_list[p])+"^"+str(result[0])+"^"+str(result[1]))
 	print(p)
 
 
 print("Closing companies file")
-SF_L.close()
+Data_out.close()
